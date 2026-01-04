@@ -1,0 +1,160 @@
+:root {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f1f2e;
+  background: #f4f6fb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.app {
+  display: grid;
+  gap: 32px;
+  width: min(1040px, 100%);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 18px 48px rgba(15, 31, 46, 0.12);
+}
+
+.card__header h1 {
+  font-size: 2.2rem;
+  margin-top: 8px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: #5b6b7c;
+}
+
+.subtitle {
+  color: #4a5c70;
+  margin-top: 12px;
+}
+
+.form {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #314155;
+}
+
+.field input {
+  border: 1px solid #d4d9e2;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: #2263f3;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary,
+.secondary {
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary {
+  background: #2263f3;
+  color: #fff;
+  border: none;
+}
+
+.secondary {
+  background: #f0f3ff;
+  border: 1px solid #d8e0ff;
+  color: #2546a6;
+}
+
+.panel {
+  background: linear-gradient(135deg, #0e5cad, #3aa2f7);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.panel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.panel ul {
+  list-style: none;
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.panel li::before {
+  content: "✓";
+  margin-right: 8px;
+}
+
+.panel__footer span {
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .card,
+  .panel {
+    padding: 28px;
+  }
+}
